@@ -5,6 +5,8 @@ MyBlog
 
 - # 好用的工具
     - markdown
+    - Git 
+
 
 - # 编程语言
     - ### JavaScript
