@@ -362,6 +362,34 @@ beforeCreate -> created -> beforeMount -> Mount -> beforeUpdate -> updated -> be
 3、常量的含义是指向的对象不能修改，但是可以改变对象内部的属性
 
 
+## 9、v-on 基本使用和语法糖
+
+  ````
+  <div id="app">
+    <h2>
+         当前计数：{{count}}
+    </h2>
+    <button @click="add">+</button>
+    <button @click="sub">-</button>//语法糖
+  </div>
+
+  const vm = new Vue({
+       el:"#app",
+       data:{
+           count：0
+       },
+       methods:{
+           add() {
+               this.count++;
+           },
+           sub() {
+               this.count--;
+           }
+       }
+   })
+   ````
+
+
 # 三、
 
 
