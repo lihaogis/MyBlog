@@ -39,7 +39,7 @@ MyBlog
 
 - # 常用数据库
     - ### Oracle
-    - ### PostGreSQL
+    - ### PostgreSQL
     - ### MySQL
 
 
@@ -53,3 +53,6 @@ MyBlog
         - #### uDig
     - ### 好用的插件
         - #### Turf.js
+    - ### 地图服务
+        - #### 栅格切片
+        - #### 矢量切片
