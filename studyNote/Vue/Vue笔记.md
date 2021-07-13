@@ -389,6 +389,48 @@ beforeCreate -> created -> beforeMount -> Mount -> beforeUpdate -> updated -> be
    })
    ````
 
+   v-on 修饰符
+
+   ````
+  <div id="app">
+    <div @click="divClick">
+      <button @click.stop="buttonClick"></button>
+    </div>
+  </div>
+
+  const vm = new Vue({
+       el:"#app",
+       data:{
+           count：0
+       },
+       methods:{
+           divClick() {
+               console.log("div 被点击")
+           },
+           buttonClick() {
+               console.log("button 被点击")
+           }
+       }
+   })
+   ````
+
+## 10、v-if/v-else 基本使用和语法糖
+
+````
+  <div id="app">
+    <h2 v-if="isShow">{{message}}</h2>
+  </div>
+
+  const vm = new Vue({
+       el:"#app",
+       data:{
+           message:'你好啊',
+           isShow:true
+       },
+       methods:{
+   })
+   ````
+
 
 # 三、
 
