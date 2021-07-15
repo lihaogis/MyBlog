@@ -498,7 +498,71 @@ beforeCreate -> created -> beforeMount -> Mount -> beforeUpdate -> updated -> be
 ## 13、v-for的基本用法
 
 - 遍历数组
+```
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="item in names">{{item}}</li>
+        </ul>
 
+        <ul>
+            <li v-for="(item,index) in names">{{index+1}}.{{item}}</li>
+        </ul>
+
+    </div>
+
+</body>
+
+<script src='js/vue.js'></script>
+
+<script>
+    const vm = new Vue({
+        el: "#app",
+        data: {
+            names: ['lihao', 'zhaomengwei', 'lixi']
+        }
+    })
+</script>
+```
+
+- 遍历对象
+```
+<body>
+    <div id="app">
+        <!-- 在遍历对象的过程中，如果只获取一个值，那么获取的是value-->
+        <ul>
+            <li v-for="item in info">{{item}}</li>
+        </ul>
+
+        <!-- 获取 key-value 的格式：(value,key)-->
+        <ul>
+            <li v-for="(value,key) in info">{{value}}-{{key}}</li>
+        </ul>
+
+        <!-- 获取 key-value-index 的格式：(value,key,index)-->
+        <ul>
+            <li v-for="(value,key,index) in info">{{value}}-{{key}}-{{index}}</li>
+        </ul>
+
+    </div>
+
+</body>
+
+<script src='js/vue.js'></script>
+
+<script>
+    const vm = new Vue({
+        el: "#app",
+        data: {
+            info: {
+                name: "why",
+                age: 18,
+                height: 1.88
+            }
+        }
+    })
+</script>
+```
 
 
 # 三、
