@@ -431,6 +431,75 @@ beforeCreate -> created -> beforeMount -> Mount -> beforeUpdate -> updated -> be
    })
    ````
 
+## 11、登录切换小案例
+
+  ````
+  <body>
+    <div id="app">
+        <span v-if="isUser">
+            <label for="username">用户账号</label>
+            <input type="text" id="username" placeholder="用户账号" key="username">
+        </span>
+        <span v-else>
+            <label for="email">用户邮箱</label>
+            <input type="text" id="email" placeholder="用户邮箱" key="email">
+        </span>
+        <button @click="isUser=!isUser">类型切换</button>
+    </div>
+
+</body>
+
+<script src='js/vue.js'></script>
+
+<script>
+    const vm = new Vue({
+        el: "#app",
+        data: {
+            isUser: true
+        }
+    })
+</script>
+   ````
+
+## 12、v-show的基本用法
+
+```
+<body>
+    <div id="app">
+        <!-- 
+            v-if:当条件为false时，包含v-if指令的元素。根部就不会存在dom中
+        -->
+        <h2 v-if="isShow" id="aaa">{{message}}</h2>
+
+        <!--
+            v-show:当条件为false时，v-show只是给我们的元素添加一个行内样式：display:none;
+        -->
+        <!--
+            当切换频率很高的时候用v-show,当只有一次切换时用v-if
+        -->
+        <h2 v-show="isShow" id="bbb">{{message}}</h2>
+    </div>
+
+</body>
+
+<script src='js/vue.js'></script>
+
+<script>
+    const vm = new Vue({
+        el: "#app",
+        data: {
+            message: "你好啊",
+            isShow:true
+        }
+    })
+</script>
+```
+
+## 13、v-for的基本用法
+
+- 遍历数组
+
+
 
 # 三、
 
